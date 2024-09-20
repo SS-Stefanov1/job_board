@@ -10,9 +10,9 @@ Route::get('/', function () { return view('posts',
     ]
 ); });
 
-Route::get('/posts/{id}', function($id) { 
+Route::get('/posts/{post}', function(Post $post) { 
     return view('post', [
-        'post' => Post::find($id)
+        'post' => $post
     ]);
 });
 
